@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+
+int birthdayCakeCandles(vector<int> candles) {
+
+    sort(candles.begin(), candles.end());
+    int count1 = 0;
+    int index = candles.size() - 1;
+    int tallest = candles[index];
+    while (tallest == candles[index]){
+        count1 ++;
+        index --;
+    }
+
+    cout<<count1<<endl;
+
+}
+
+
+int main(){
+    vector <int> vec;
+    int n, a;
+    cin>>n;
+
+    while(n--){
+        cin>>a;
+        vec.push_back(a);
+    }
+
+    birthdayCakeCandles(vec);
+
+
+    return 0;
+
+}
