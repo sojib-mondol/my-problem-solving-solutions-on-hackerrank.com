@@ -1,0 +1,22 @@
+//problem link: https://www.hackerrank.com/challenges/grading/problem
+
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int t;
+    cin>>t;
+    while (t--)
+    {
+        int n;
+        cin>>n;
+        int mod = n%5;
+        int new_n = 5-mod + n;
+
+        if((new_n-n)<3 && new_n >= 40) cout<<new_n<<endl;
+        else cout<<n<<endl;
+    }
+
+}
