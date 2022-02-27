@@ -1,0 +1,31 @@
+//problem link: https://www.hackerrank.com/challenges/apple-and-orange/problem
+#include <bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define fl(i, n) for (ll i = 0; i < n; i++)
+
+int main()
+{
+    ll s, t, a, b, m, n, ans1 = 0, ans2 = 0;
+    cin >> s >> t >> a >> b >> m >> n;
+    ll arr_m[m], arr_n[n];
+
+    fl(i, m)
+    {
+        cin >> arr_m[i];
+        arr_m[i] = a + arr_m[i];
+        if (arr_m[i] >= s && arr_m[i] <= t)
+            ans1++;
+    }
+    fl(i, n)
+    {
+        cin >> arr_n[i];
+        arr_n[i] = b + arr_n[i];
+        if (arr_n[i] <= t && arr_n[i] >= s)
+            ans2++;
+    }
+
+    cout << ans1 << "\n"
+         << ans2 << "\n";
+}
